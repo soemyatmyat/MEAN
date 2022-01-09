@@ -1,5 +1,5 @@
 const db = require("../models");
-const Todo = db.todos;
+const Todo = db.todo;
 const Op = db.Sequelize.op;
 
 // Create and Save a new ToDo
@@ -117,7 +117,7 @@ const id = req.params.id;
       res.status(500).send({
         message: "Could not delete Todo with id=" + id
       });
-    });  
+    });
 };
 
 // Delete all ToDos from the database.
